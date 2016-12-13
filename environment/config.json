@@ -1,0 +1,38 @@
+{
+  "name": "vivid64",
+  "box_url": "https://cloud-images.ubuntu.com/vagrant/vivid/current/vivid-server-cloudimg-amd64-vagrant-disk1.box",
+  "hostname": "melendrez",
+  "aliases": {
+    // The key is used as a drush alias
+    "melendrez": "local.melendrez.com"
+  },
+  "ip": "192.168.84.172",
+  "synced_folder": {
+    "host_path": "./docroot",
+    "guest_path": "/home/vagrant/www"
+  },
+  "synced_scripts": {
+    "host_path": "./scripts",
+    "guest_path": "/home/vagrant/scripts"
+  },
+  "vm_gui": false,
+  "vm_name": "melendrez-vagrant",
+  "ports": {
+    "http_host_varnish": 8078,
+    "http_guest_varnish": 80,
+    "https_host": 8478,
+    "https_guest": 443,
+    "http_host_apache": 10078,
+    "http_guest_apache": 1000,
+    "http_host_solr": 28078,
+    "http_guest_solr": 8080
+  },
+
+  "mem": 4096,
+  "cpus": 2,
+  
+  //SET THIS TO TRUE IF YOU'RE ON WINDOWS
+  "nfs": true,
+
+  "rsync_exclude": [".git/", ".vagrant", "*environment.php", "*/img/home/features/", "*/img/landing/features/", "*/img/profiles/", "*/img/system/athletes/", "*/ckfinder/userfiles"]
+}

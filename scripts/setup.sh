@@ -73,3 +73,4 @@ git config --global core.filemode false && cd ~/www/docroot/ && git config core.
 
 cd ~/ && git clone git@bitbucket.org:staufferinc/melendrez.git
 mv ~/melendrez ~/www/docroot
+mv ~/www/local.melendrez.com  ~/www/docroot/sites/local.melendrez.com

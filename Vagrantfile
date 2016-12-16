@@ -32,7 +32,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.hostsupdater.remove_on_suspend = true
   #config.vm.hostname = vm_config["hostname"]
-  config.vm.provision :shell, inline: "hostnamectl set-hostname executive"
+  config.vm.provision :shell, inline: "hostnamectl set-hostname melendrez"
   if defined? VagrantPlugins::HostsUpdater
     # Capture the paths to all hostname
     if !vm_config['aliases'].empty?
